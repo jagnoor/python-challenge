@@ -1,5 +1,5 @@
 
-# Python Homework - Py Me Up, Charlie  - PyPoll 
+# Python Homework - Py Me Up, Charlie  - PyPoll
 
 
 # Import Modules/Dependencies
@@ -21,16 +21,16 @@ with open(csvpath, newline='') as csvfile:
 
     # CSV Reader Specifies Delimiter & Variable That Holds Contents
     csvreader = csv.reader(csvfile, delimiter=',')
-    
+
     # Read The Header Row First (Skip This Step If There Is No Header)
     csv_header = next(csvfile)
 
     # Read Each Row Of Data After The Header
     for row in csvreader:
-        
+
         # Calculate Total Number Of Votes Cast
         total_votes += 1
-        
+
         # Calculate Total Number Of Votes Each Candidate Won
         if (row[2] == "Khan"):
             khan_votes += 1
@@ -40,13 +40,13 @@ with open(csvpath, newline='') as csvfile:
             li_votes += 1
         else:
             otooley_votes += 1
-            
+
     # Calculate Percentage Of Votes Each Candidate Won
     kahn_percent = khan_votes / total_votes
     correy_percent = correy_votes / total_votes
     li_percent = li_votes / total_votes
     otooley_percent = otooley_votes / total_votes
-    
+
     # Calculate Winner Of The Election Based On Popular Vote
     winner = max(khan_votes, correy_votes, li_votes, otooley_votes)
 
@@ -57,7 +57,7 @@ with open(csvpath, newline='') as csvfile:
     elif winner == li_votes:
         winner_name = "Li"
     else:
-        winner_name = "O'Tooley" 
+        winner_name = "O'Tooley"
 
 # Print Analysis
 print(f"Election Results")
@@ -73,12 +73,13 @@ print(f"Winner: {winner_name}")
 print(f"---------------------------")
 
 # Specify File To Write To
-output_file = os.path.join('.', 'PyPoll', 'Resources', 'election_data_revised.text')
+output_file = os.path.join('.', 'PyPoll', 'Resources',
+                           'election_data_revised.text')
 
 # Open File Using "Write" Mode. Specify The Variable To Hold The Contents
 with open(output_file, 'w',) as txtfile:
 
-# Write New Data
+    # Write New Data
     txtfile.write(f"Election Results\n")
     txtfile.write(f"---------------------------\n")
     txtfile.write(f"Total Votes: {total_votes}\n")

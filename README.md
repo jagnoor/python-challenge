@@ -24,6 +24,8 @@ Both of these challenges encompass a real-world situation where your newfound Py
 
 * Push the above changes to GitHub or GitLab.
 
+
+
 ## PyBank
 
 ![Revenue](Images/revenue-per-lead.png)
@@ -55,6 +57,11 @@ Both of these challenges encompass a real-world situation where your newfound Py
   ```
 
 * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+
+Here is the output 
+
+![PyPoll](Images/PyPoll.png)
+
 
 ## PyPoll
 
@@ -91,6 +98,10 @@ Both of these challenges encompass a real-world situation where your newfound Py
   ```
 
 * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+
+Here is the output 
+
+![PyBank](Images/PyBank.png)
 
 ## Hints and Considerations
 
