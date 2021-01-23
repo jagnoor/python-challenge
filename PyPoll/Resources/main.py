@@ -14,19 +14,19 @@ li_votes = 0
 otooley_votes = 0
 
 # Set Path For File
-csvpath = os.path.join('.', 'PyPoll', 'Resources', 'election_data.csv')
+PyPollPath = os.path.join('.', 'PyPoll', 'Resources', 'election_data.csv')
 
 # Open & Read CSV File
-with open(csvpath, newline='') as csvfile:
+with open(PyPollPath, newline='') as PyPollFile:
 
     # CSV Reader Specifies Delimiter & Variable That Holds Contents
-    csvreader = csv.reader(csvfile, delimiter=',')
+    PyPollReader = csv.reader(PyPollFile, delimiter=',')
 
     # Read The Header Row First (Skip This Step If There Is No Header)
-    csv_header = next(csvfile)
+    PyPoll_Header = next(PyPollFile)
 
     # Read Each Row Of Data After The Header
-    for row in csvreader:
+    for row in PyPollReader:
 
         # Calculate Total Number Of Votes Cast
         total_votes += 1
@@ -73,11 +73,11 @@ print(f"Winner: {winner_name}")
 print(f"---------------------------")
 
 # Specify File To Write To
-output_file = os.path.join('.', 'PyPoll', 'Resources',
+PyPoll_Output = os.path.join('.', 'PyPoll', 'Resources',
                            'election_data_revised.text')
 
 # Open File Using "Write" Mode. Specify The Variable To Hold The Contents
-with open(output_file, 'w',) as txtfile:
+with open(PyPoll_Output, 'w',) as txtfile:
 
     # Write New Data
     txtfile.write(f"Election Results\n")
@@ -90,4 +90,4 @@ with open(output_file, 'w',) as txtfile:
     txtfile.write(f"O'Tooley: {otooley_percent:.3%}({otooley_votes})\n")
     txtfile.write(f"---------------------------\n")
     txtfile.write(f"Winner: {winner_name}\n")
-    txtfile.write(f"---------------------------\n")
+    txtfile.write(f"---------'As declared by JAG'------------------\n")
