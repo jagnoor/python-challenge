@@ -99,7 +99,7 @@ Here is the output
 
 * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
-Here is the output 
+Here is the output
 
 ![PyBank](Images/PyBank.png)
 
