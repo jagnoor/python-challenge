@@ -91,3 +91,9 @@ with open(PyPoll_Output, 'w',) as txtfile:
     txtfile.write(f"---------------------------\n")
     txtfile.write(f"Winner: {winner_name}\n")
     txtfile.write(f"---------'As declared by JAG'------------------\n")
+
+
+
+
+
+
